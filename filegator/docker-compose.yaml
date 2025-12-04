@@ -1,0 +1,13 @@
+version: "3.9"
+
+services
+  filegator:
+    image: filegator/filegator:latest
+    container_name: filegator
+    restart: always
+    ports:
+    - "8090-8080"
+    volumes:
+    - filegator_data:/var/www/html/private
+volumes:
+      filegator_data:
